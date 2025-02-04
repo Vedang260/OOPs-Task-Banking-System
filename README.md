@@ -1,2 +1,2 @@
-# Banking-System---OOPs-Task
+# Banking-System-OOPs-Task
 It is a Banking System implemented in Javascript.
