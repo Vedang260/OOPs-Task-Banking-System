@@ -1,16 +1,19 @@
 import { IAccount } from "../interfaces/IAccount";
+import { AccountType } from "../utils/AccountType";
 
 export abstract class Account implements IAccount{
     private static accountCounter: number = 0;
     public readonly accountNumber: number;
-    private balance: number;
-    private readonly pin: number;
+    private accountType: AccountType;
+    protected balance: number;
+    protected readonly pin: number;
 
-    constructor(pin: number, initialBalance: number = 0) {
+    constructor(pin: number, accountType: AccountType, initialBalance: number = 0) {
         Account.accountCounter++;
         this.accountNumber = Number(`${Account.accountCounter}`.padStart(10, '0'));
         this.balance = initialBalance;
         this.pin = pin;
+        this.accountType = accountType;
     }
 
     public deposit(amount: number): void {
