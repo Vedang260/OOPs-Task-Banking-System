@@ -32,7 +32,8 @@ export class Room implements IRoom{
         this.price = price;
     }
     getRoomDetails(): string {
-        throw new Error("Method not implemented.");
+        return `Room Number: ${this.roomNumber}
+                Room Type: ${this.roomType}
+                Price: ${this.price}`;
     }
-    
 }
