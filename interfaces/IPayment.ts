@@ -1,4 +1,4 @@
 // using an interface to allow new payment methods
-export interface Payment{
+export interface IPayment{
     pay(amount: number): void;
 }
